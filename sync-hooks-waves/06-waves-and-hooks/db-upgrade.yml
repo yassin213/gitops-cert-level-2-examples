@@ -5,7 +5,7 @@ metadata:
   generateName: my-db-upgrade-
   labels:
     codefresh.io/cert: db-job  
-   annotations:
+  annotations:
     argocd.argoproj.io/PreSync, wave: "10" 
 spec:
   template:
