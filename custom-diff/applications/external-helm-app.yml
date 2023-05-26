@@ -7,6 +7,11 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
+  ignoreDifferences:
+    - group: apps/v1
+      kind: Deployment
+      jsonPointers:
+        - /spec/template/spec/containers/0/env/0/value 
 
   source:
     repoURL: https://github.com/codefresh-contrib/gitops-cert-level-2-examples.git
